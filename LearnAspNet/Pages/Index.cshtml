@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "İsim yazdırma Sayfası";
+}
+
+<h2>Lütfen isminizi girin</h2>
+
+<form method="post">
+    <input type="text" asp-for="Name" placeholder="Adınızı yazın" />
+    <button type="submit">Gönder</button>
+</form>
+
+@if (Model.ShowMessage)
+{
+    <p>Benim adım @Model.Name</p>
+}
